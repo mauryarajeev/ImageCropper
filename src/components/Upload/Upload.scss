@@ -6,8 +6,9 @@
 }
 
 .box-image {
-  height: auto;
+  height: 300px;
   margin-bottom: 16px;
+  width:400px
   
 }
 
@@ -31,7 +32,7 @@
   border-radius: 4px;
   padding: 10px 20px;
   font-size: 14px;
-  margin-top: 110%; /* Adjusted for proper spacing */
+  margin-top: 150%; /* Adjusted for proper spacing */
   cursor: pointer;
   transition: background-color 0.3s;
 
