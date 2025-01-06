@@ -1,0 +1,95 @@
+.cropperBack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-color: rgba(63, 63, 63, 0.6); // Darkened background for better contrast
+  z-index: 1000; // Ensures it is on top of other elements
+}
+
+.cropperRoot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 700px; // Larger cropper width
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Subtle shadow for emphasis
+  padding: 16px; // Added padding for spacing
+
+  @media screen and (max-width: 700px) {
+    width: 95%; // Responsive for smaller screens
+  }
+}
+
+.cropContainer {
+  position: relative;
+  width: 100%;
+  height: 400px; // Increased height for the crop area
+  background-color: #333333;
+
+  border-radius: 6px;
+  overflow: hidden; // Ensures no overflow from crop area
+
+  @media screen and (max-width: 500px) {
+    height: 300px; // Adjust height for very small screens
+  }
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; // Increased gap for better spacing
+  margin-top: 20px; // Adds spacing between the cropper and controls
+  width: 100%;
+}
+
+.cropButton {
+  border-radius: 8px;
+  border: none;
+  font-size: 1.2em; // Slightly larger button text for prominence
+  font-weight: bold;
+  font-family: inherit;
+  cursor: pointer;
+
+  background-color: #007bff; // Bright blue for emphasis
+  color: white;
+
+  padding: 12px 20px; // Comfortable padding
+  width: fit-content; // Button wraps the text
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #0056b3; // Darker blue on hover
+  }
+}
+
+.sliderContainer {
+  display: flex;
+  flex-direction: column; // Stacks the sliders vertically
+  align-items: center;
+  gap: 15px; // Space between slider and labels
+  width: 100%; // Sliders span full width
+}
+
+.sliderContainer h3 {
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+}
+
+.sliderContainer input {
+  width: 100%; // Ensures sliders take full width
+}
